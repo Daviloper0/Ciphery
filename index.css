@@ -1,5 +1,5 @@
-@import url('/lighttheme.css');
-@import url('/darktheme.css');
+@import url('./lighttheme.css');
+@import url('./darktheme.css');
 * {
     border: 0;
     box-sizing: border-box;

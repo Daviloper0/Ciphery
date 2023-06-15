@@ -68,6 +68,6 @@ export class TertiaryButton extends HTMLElement {
     return functions[`${doCall}`]
   }
   render() {
-    this.innerHTML = `<img src="${this.imageSource}">`;
+    this.innerHTML = `<img src="./${this.imageSource}">`;
   }
 }
