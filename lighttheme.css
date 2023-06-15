@@ -1,0 +1,70 @@
+:root {
+  --LIGHT-APP-BACKGROUND: #fff;
+  --LIGHT-HEADER-TITLE: #27272A;
+  --LIGHT-HEADER-SUBTITLE: #27272A;
+  --LIGHT-SESSION-TEXT: #3F3F46;
+
+  --LIGHT-INPUT-BACKGROUND: #E4E4E7;
+  --LIGHT-INPUT-TEXT: #3F3F46;
+  
+  --LIGHT-PRIMARYBUTTON-BACKGROUND: #F43F5E;
+  --LIGHT-PRIMARYBUTTON-TEXT: #FAFAFA;
+  
+  --LIGHT-SECONDARYBUTTON-BACKGROUND: #fb71851a;
+  --LIGHT-SECONDARYBUTTON-BORDER: #FB7185;
+  --LIGHT-SECONDARYBUTTON-TEXT: #FB7185;
+
+  --LIGHT-disabled-SECONDARYBUTTON-BACKGROUND: #F4F4F5;
+  --LIGHT-disabled-SECONDARYBUTTON-BORDER: #A1A1AA;
+  --LIGHT-disabled-SECONDARYBUTTON-TEXT: #A1A1AA;
+
+  --LIGHT-TERTIARYBUTTON-BACKGROUND: #E4E4E7;
+  --LIGHT-TERTIARYBUTTON-TEXT: #3F3F46;   
+}
+body[data-theme="light"] {
+  background-color: var(--LIGHT-APP-BACKGROUND);
+}
+body[data-theme="light"] app-primarybutton {
+  background-color: var(--LIGHT-PRIMARYBUTTON-BACKGROUND);
+  color: var(--LIGHT-PRIMARYBUTTON-TEXT);
+}
+body[data-theme="light"] app-primarybutton:hover {
+  color: var(--LIGHT-PRIMARYBUTTON-BACKGROUND);
+  background-color: var(--LIGHT-PRIMARYBUTTON-TEXT);
+  border: 1px solid var(--LIGHT-PRIMARYBUTTON-BACKGROUND);
+}
+body[data-theme="light"] app-secondarybutton[data-selected="true"] {
+  background-color: var(--LIGHT-SECONDARYBUTTON-BACKGROUND);
+  border: 1px solid var(--LIGHT-SECONDARYBUTTON-BORDER);
+  color: var(--LIGHT-SECONDARYBUTTON-TEXT);
+}
+body[data-theme="light"] app-secondarybutton[data-selected="false"] {
+  background-color: var(--LIGHT-disabled-SECONDARYBUTTON-BACKGROUND);
+  border: 1px solid var(--LIGHT-disabled-SECONDARYBUTTON-BORDER);
+  color: var(--LIGHT-disabled-SECONDARYBUTTON-TEXT);
+}
+body[data-theme="light"] app-tertiarybutton {
+  background-color: var(--LIGHT-TERTIARYBUTTON-BACKGROUND);
+}
+body[data-theme="light"] app-longinput {
+  background-color: var(--LIGHT-INPUT-BACKGROUND);
+}
+body[data-theme="light"] app-longinput > input {
+  color: var(--LIGHT-SESSION-TEXT)
+}
+body[data-theme="light"] app-shortinput {
+  background-color: var(--LIGHT-INPUT-BACKGROUND);
+}
+body[data-theme="light"] h1 {
+  color: var(--LIGHT-HEADER-TITLE);
+}
+body[data-theme="light"] h2 {
+  color: var(--LIGHT-HEADER-SUBTITLE);
+}
+body[data-theme="light"] main, section {
+  border: 1px solid var(--LIGHT-INPUT-BACKGROUND); /*Remover redundância, border tem nos dois, não faz sentido colocar o shorthand inteiro aqui. Duas propriedades no arquivo principal e a cor aqui.*/
+}
+body[data-theme="light"] main > p, section > p {
+  color: var(--LIGHT-SESSION-TEXT);
+}
+

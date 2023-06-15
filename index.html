@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciphery - Desbloqueie seu mundo com senhas seguras!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body data-theme="light">
+    <header>
+        <div class="app-breaker">
+            <h1>Ciphery</h1>
+            <h2>Desbloqueie seu mundo com senhas seguras!</h2>
+        </div> 
+        <div class="app-options">
+            <app-tertiarybutton source="/assets/light/light-colormode.svg" do="switchColorMode"></app-tertiarybutton>
+            <app-tertiarybutton source="/assets/light/light-github.svg" linkTo=""></app-tertiarybutton>
+        </div>
+    </header>
+    <div class="app-row">
+        <main>
+            <p>Senha Padrão</p>
+            <div class="app-cardrow">
+                <app-longinput initialText="Abc"></app-longinput>
+                <app-tertiarybutton source="/assets/light/light-copy.svg"></app-tertiarybutton>
+                <app-primarybutton content="Gerar"></app-primarybutton>
+            </div>
+
+            <p>Hash Gerado</p>
+            <div class="app-cardrow">
+                <app-longinput initialText="Abc" data-selectable="false"></app-longinput>
+                <app-primarybutton content="Editar"></app-primarybutton>
+            </div>
+            <div class="app-cardrow">
+                <app-secondarybutton content="MD5" data-selected="true" data-set="cryptography"></app-secondarybutton>
+                <app-secondarybutton content="SHA-1" data-selected="false" data-set="cryptography"></app-secondarybutton>
+                <app-secondarybutton content="bycript" data-selected="false" data-set="cryptography"></app-secondarybutton>
+            </div>
+        </main>
+        <section>
+            <p>Características</p>
+            <div class="app-cardrow">
+                <app-secondarybutton content="ABC" data-selected="true" data-set="options"></app-secondarybutton>
+                <app-secondarybutton content="abc" data-selected="true" data-set="options"></app-secondarybutton>
+                <app-secondarybutton content="123" data-selected="true" data-set="options"></app-secondarybutton>
+                <app-secondarybutton content="!#@" data-selected="true" data-set="options"></app-secondarybutton>
+            </div>
+            <p>Tamanho</p>
+            <app-shortinput></app-shortinput>
+        </section>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "ciphery",
+  "version": "1.0.0",
+  "description": "Desbloqueie seu mundo com senhas seguras!",
+  "main": "index.js",
+  "author": "daviloper <odaviloper@gmail.com>",
+  "license": "ISC",
+  "type": "module"
+}

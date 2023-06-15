@@ -1,0 +1,143 @@
+@import url('/lighttheme.css');
+@import url('/darktheme.css');
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+
+    font-family: 'Inter', sans-serif;
+}
+/*Colors*/
+
+/*TODO: Adicionar cor por preferência, e também salvar as preferências no localstorage*/
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px 10vw;
+}
+body > * {
+    width: 100%;
+}
+app-primarybutton, app-secondarybutton, app-terciarybutton {
+    user-select: none;
+}
+app-primarybutton:hover, app-secondarybutton:hover, app-tertiarybutton:hover {
+    cursor: pointer;
+}
+app-primarybutton {
+    border-radius: 4px;
+    font-size: 16px;
+    height: max-content;
+    padding: 10px 24px;
+    transition-duration: 0.2s;
+    border: 1px solid transparent;
+}
+
+app-secondarybutton {
+    border-radius: 16px;
+    display: block;
+    font-size: 12px;
+    padding: 4px 0px;
+    text-align: center;
+    width: 70px;
+}
+
+app-tertiarybutton {
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    padding: 8px;
+    width: 40px;
+}
+app-tertiarybutton > img {
+    height: 25px;
+    width: 25px;
+}
+app-longinput{
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+app-longinput > input{
+    background-color: transparent;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: monospace;
+}
+app-longinput[data-selectable="false"] > input {
+    pointer-events: none;
+}
+app-shortinput {
+    border-radius: 4px;
+    display: block;
+    height: 30px;
+    width: max-content;
+}
+app-shortinput > input {
+    background-color: transparent;
+    height: 30px;
+    width: 40px;
+    padding: 4px;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > .app-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.app-row {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+main, section {
+    padding: 32px;
+    border-radius: 12px;
+}
+main {
+    flex: 1;
+}
+main > p, section > p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section > .app-cardrow {
+    margin-bottom: 20px;
+}
+.app-cardrow{
+    display: flex;
+    gap: 10px;
+}

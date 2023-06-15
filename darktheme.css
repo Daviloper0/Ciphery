@@ -1,0 +1,69 @@
+:root {
+  --DARK-APP-BACKGROUND: #18181B;
+  --DARK-HEADER-TITLE: #E4E4E7;
+  --DARK-HEADER-SUBTITLE:#71717A;
+  --DARK-SESSION-TEXT: #A1A1AA;
+
+  --DARK-INPUT-BACKGROUND: #27272A;
+  --DARK-INPUT-TEXT: #A1A1AA;
+
+  --DARK-PRIMARYBUTTON-BACKGROUND: #F43F5E;
+  --DARK-PRIMARYBUTTON-TEXT: #FAFAFA;
+  
+  --DARK-SECONDARYBUTTON-BACKGROUND: #FB71851a;
+  --DARK-SECONDARYBUTTON-BORDER: #FB7185;
+  --DARK-SECONDARYBUTTON-TEXT: #FB7185;
+
+  --DARK-disabled-SECONDARYBUTTON-BACKGROUND: #18181B;
+  --DARK-disabled-SECONDARYBUTTON-BORDER: #52525B;
+  --DARK-disabled-SECONDARYBUTTON-TEXT: #52525B;
+
+  --DARK-TERTIARYBUTTON-BACKGROUND: #27272A;
+  --DARK-TERTIARYBUTTON-TEXT: #71717A;
+}
+body[data-theme="dark"] {
+  background-color: var(--DARK-APP-BACKGROUND);
+}
+body[data-theme="dark"] app-primarybutton {
+  background-color: var(--DARK-PRIMARYBUTTON-BACKGROUND);
+  color: var(--DARK-PRIMARYBUTTON-TEXT);
+}
+body[data-theme="dark"] app-primarybutton:hover {
+  color: var(--DARK-PRIMARYBUTTON-TEXT);
+  background-color: var(--DARK-APP-BACKGROUND);
+  border: 1px solid var(--DARK-PRIMARYBUTTON-BACKGROUND);
+}
+body[data-theme="dark"] app-secondarybutton[data-selected="true"] {
+  background-color: var(--DARK-SECONDARYBUTTON-BACKGROUND);
+  border: 1px solid var(--DARK-SECONDARYBUTTON-BORDER);
+  color: var(--DARK-SECONDARYBUTTON-TEXT);
+}
+body[data-theme="dark"] app-secondarybutton[data-selected="false"] {
+  background-color: var(--DARK-disabled-SECONDARYBUTTON-BACKGROUND);
+  border: 1px solid var(--DARK-disabled-SECONDARYBUTTON-BORDER);
+  color: var(--DARK-disabled-SECONDARYBUTTON-TEXT);
+}
+body[data-theme="dark"] app-tertiarybutton {
+  background-color: var(--DARK-TERTIARYBUTTON-BACKGROUND);
+}
+body[data-theme="dark"] app-longinput {
+  background-color: var(--DARK-INPUT-BACKGROUND);
+}
+body[data-theme="dark"] app-longinput > input {
+  color: var(--DARK-SESSION-TEXT)
+}
+body[data-theme="dark"] app-shortinput {
+  background-color: var(--DARK-INPUT-BACKGROUND);
+}
+body[data-theme="dark"] h1 {
+  color: var(--DARK-HEADER-TITLE);
+}
+body[data-theme="dark"] h2 {
+  color: var(--DARK-HEADER-SUBTITLE);
+}
+body[data-theme="dark"] main, body[data-theme="dark"] section {
+  border: 1px solid var(--DARK-INPUT-BACKGROUND); /*Remover redundância, border tem nos dois, não faz sentido colocar o shorthand inteiro aqui. Duas propriedades no arquivo principal e a cor aqui.*/
+}
+body[data-theme="dark"] main > p, body[data-theme="dark"] section > p {
+  color: var(--DARK-SESSION-TEXT);
+}
