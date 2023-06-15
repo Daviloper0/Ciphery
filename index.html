@@ -24,15 +24,15 @@
         <main>
             <p>Senha Padrão</p>
             <div class="app-cardrow">
-                <app-longinput initialText="Abc"></app-longinput>
+                <app-longinput initialText="Abc" id="nonEncryptedPassword"></app-longinput>
                 <app-tertiarybutton source="/assets/light/light-copy.svg"></app-tertiarybutton>
-                <app-primarybutton content="Gerar"></app-primarybutton>
+                <app-primarybutton content="Gerar" id="generate"></app-primarybutton>
             </div>
 
             <p>Hash Gerado</p>
             <div class="app-cardrow">
                 <app-longinput initialText="Abc" data-selectable="false"></app-longinput>
-                <app-primarybutton content="Editar"></app-primarybutton>
+                <app-primarybutton content="Copiar"></app-primarybutton>
             </div>
             <div class="app-cardrow">
                 <app-secondarybutton content="MD5" data-selected="true" data-set="cryptography"></app-secondarybutton>
@@ -43,10 +43,10 @@
         <section>
             <p>Características</p>
             <div class="app-cardrow">
-                <app-secondarybutton content="ABC" data-selected="true" data-set="options"></app-secondarybutton>
-                <app-secondarybutton content="abc" data-selected="true" data-set="options"></app-secondarybutton>
-                <app-secondarybutton content="123" data-selected="true" data-set="options"></app-secondarybutton>
-                <app-secondarybutton content="!#@" data-selected="true" data-set="options"></app-secondarybutton>
+                <app-secondarybutton content="ABC" data-selected="true" data-set="options" data-start="65" data-end="90"></app-secondarybutton>
+                <app-secondarybutton content="abc" data-selected="true" data-set="options" data-start="97" data-end="122"></app-secondarybutton>
+                <app-secondarybutton content="123" data-selected="true" data-set="options" data-start="48" data-end="57"></app-secondarybutton>
+                <app-secondarybutton content="!#@" data-selected="true" data-set="options" data-start="33" data-end="47"></app-secondarybutton>
             </div>
             <p>Tamanho</p>
             <app-shortinput></app-shortinput>
