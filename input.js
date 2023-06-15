@@ -22,7 +22,7 @@ export class ShortInput extends HTMLElement {
   }
   render() {
     this.innerHTML = `
-      <input type="text">
+      <input type="text" value="8">
     `
   }
 }

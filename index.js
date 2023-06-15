@@ -1,7 +1,7 @@
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./buttons.js"; 
+import { BYCRIPTEncrypt, MD5Encrypt, SHA1Encrypt } from "./encrypt.js";
 import { LongInput, ShortInput } from "./input.js";
-//TODO: AUTO GENERATE PASSWORD WHEN ENTER WEBSITE
-
+createCustomElements();
 function generatePassword() {
   let passwordInput = document.querySelector('app-longinput#nonEncryptedPassword > input');
   let passwordLenght = document.querySelector('app-shortinput > input').value === '' ? 8 : document.querySelector('app-shortinput > input').value;
@@ -12,6 +12,8 @@ function generatePassword() {
     finalPassword += String.fromCharCode(randomChar);
   }
   passwordInput.value = finalPassword;
+  
+  generateHashPassword(passwordInput.value);
 }
 function getRandomCharacter(options) {
   let randomOption = getRandomNumber(0, options.length);
@@ -25,9 +27,24 @@ function getRandomNumber(min, max) {
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min) + min);
 }
+function generateHashPassword(passwordString) {
+  let type = document.querySelector('app-secondarybutton[data-set="cryptography"][data-selected="true"]').content
+  let hashOutput = document.querySelector('app-longinput[data-selectable="false"] > input')
+  let encryptedResult = '';
+  
+  if (type === 'MD5') encryptedResult = MD5Encrypt(passwordString);
+  if (type === 'SHA-1') encryptedResult = SHA1Encrypt(passwordString);
+  if (type === 'bycript') encryptedResult = BYCRIPTEncrypt(passwordString);
+
+  hashOutput.value = encryptedResult;
+}
+
 document.querySelector('app-primarybutton#generate').addEventListener('click', () => {generatePassword()})
-customElements.define('app-primarybutton', PrimaryButton);
-customElements.define('app-secondarybutton', SecondaryButton);
-customElements.define('app-tertiarybutton', TertiaryButton);
-customElements.define('app-longinput', LongInput);
-customElements.define('app-shortinput', ShortInput);
+function createCustomElements() {
+  customElements.define('app-primarybutton', PrimaryButton);
+  customElements.define('app-secondarybutton', SecondaryButton);
+  customElements.define('app-tertiarybutton', TertiaryButton);
+  customElements.define('app-longinput', LongInput);
+  customElements.define('app-shortinput', ShortInput);  
+}
+generatePassword()
