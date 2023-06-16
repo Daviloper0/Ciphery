@@ -1,0 +1,38 @@
+app-primarybutton, app-secondarybutton, app-terciarybutton {
+  user-select: none;
+}
+app-primarybutton:hover, app-secondarybutton:hover, app-tertiarybutton:hover {
+  cursor: pointer;
+}
+app-primarybutton {
+  border-radius: 4px;
+  font-size: 16px;
+  height: max-content;
+  padding: 10px 24px;
+  transition-duration: 0.2s;
+  border: 1px solid transparent;
+}
+
+app-secondarybutton {
+  border-radius: 16px;
+  display: block;
+  font-size: 12px;
+  padding: 4px 0px;
+  text-align: center;
+  width: 70px;
+}
+
+app-tertiarybutton {
+  align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  padding: 8px;
+  width: 40px;
+}
+app-tertiarybutton > img {
+  height: 25px;
+  width: 25px;
+}

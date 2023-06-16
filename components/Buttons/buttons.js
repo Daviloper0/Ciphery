@@ -1,6 +1,6 @@
-import { switchColorMode } from "./switchColorMode.js";
-import { copy } from "./copy.js";
-import { generateHashPassword } from "./index.js";
+import { switchColorMode } from "../../themes/switchColorMode.js";
+import { copy } from "../../features/copy.js";
+import { generateHashPassword } from "../../features/encrypt.js";
 
 export class PrimaryButton extends HTMLElement {
   constructor() {
