@@ -54,6 +54,10 @@ body[data-theme="dark"] app-longinput > input {
 }
 body[data-theme="dark"] app-shortinput {
   background-color: var(--DARK-INPUT-BACKGROUND);
+  
+}
+body[data-theme="dark"] app-shortinput > input{
+  color: var(--DARK-INPUT-TEXT);
 }
 body[data-theme="dark"] h1 {
   color: var(--DARK-HEADER-TITLE);

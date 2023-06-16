@@ -1,4 +1,3 @@
-//TODO: adicionar os metodos de encript
 export function MD5Encrypt(string) {
   return CryptoJS.MD5(string).toString();
 }

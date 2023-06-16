@@ -59,18 +59,20 @@ export class TertiaryButton extends HTMLElement {
     if (this.getAttribute('do') !== null) this.addEventListener('click', () => {
       this.getDoFunctions(this.getAttribute('do'))()
     })
+    if (this.getAttribute('linkTo') !== null) this.addEventListener('click', () => {
+      window.open('https://github.com/Daviloper0', '_blank')
+    })
     this.render();
   }
-  
 
   getDoFunctions(doCall) {
     const functions = {
       'switchColorMode': () => {switchColorMode()},
-      'copy': () => {copy()}
+      'copy': async () => {await copy(document.querySelector('app-longinput#nonEncryptedPassword > input'))}
     }
     return functions[`${doCall}`]
   }
   render() {
-    this.innerHTML = `<img src="./${this.imageSource}">`;
+    this.innerHTML = `<img src=".${this.imageSource}">`;
   }
 }

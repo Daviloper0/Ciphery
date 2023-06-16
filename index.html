@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
 </head>
+
 <body data-theme="light">
     <header>
         <div class="app-breaker">
@@ -25,14 +27,14 @@
             <p>Senha Padrão</p>
             <div class="app-cardrow">
                 <app-longinput id="nonEncryptedPassword"></app-longinput>
-                <app-tertiarybutton source="/assets/light/light-copy.svg"></app-tertiarybutton>
+                <app-tertiarybutton source="/assets/light/light-copy.svg" do="copy"></app-tertiarybutton>
                 <app-primarybutton content="Gerar" id="generate"></app-primarybutton>
             </div>
 
             <p>Hash Gerado</p>
             <div class="app-cardrow">
                 <app-longinput data-selectable="false"></app-longinput>
-                <app-primarybutton content="Copiar"></app-primarybutton>
+                <app-primarybutton content="Copiar" id="copy"></app-primarybutton>
             </div>
             <div class="app-cardrow">
                 <app-secondarybutton content="MD5" data-selected="true" data-set="cryptography"></app-secondarybutton>
@@ -42,7 +44,7 @@
         </main>
         <section>
             <p>Características</p>
-            <div class="app-cardrow"> <!--TODO: salvar essas opções automaticamente, ou pelo menos a cada vez que usar o gerador-->
+            <div class="app-cardrow"> 
                 <app-secondarybutton content="ABC" data-selected="true" data-set="options" data-start="65" data-end="90"></app-secondarybutton>
                 <app-secondarybutton content="abc" data-selected="true" data-set="options" data-start="97" data-end="122"></app-secondarybutton>
                 <app-secondarybutton content="123" data-selected="false" data-set="options" data-start="48" data-end="57"></app-secondarybutton>
@@ -53,9 +55,6 @@
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        
-    </script>
     <script src="index.js" type="module"></script>
 </body>
 </html>

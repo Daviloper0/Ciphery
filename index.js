@@ -1,7 +1,11 @@
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./buttons.js"; 
+import { copy } from "./copy.js";
 import { BASE64Encrypt, MD5Encrypt, SHA1Encrypt } from "./encrypt.js";
 import { LongInput, ShortInput } from "./input.js";
+import { autoSwitchColorModeIfPossible } from "./switchColorMode.js";
 createCustomElements();
+autoSwitchColorModeIfPossible();
+
 function generatePassword() {
   let passwordInput = document.querySelector('app-longinput#nonEncryptedPassword > input');
   let passwordLenght = document.querySelector('app-shortinput > input').value === '' ? 8 : document.querySelector('app-shortinput > input').value;
@@ -39,13 +43,15 @@ export function generateHashPassword(passwordString) {
   hashOutput.value = encryptedResult;
 }
 
-document.querySelector('app-primarybutton#generate').addEventListener('click', () => {generatePassword()})
-document.querySelector('app-longinput#nonEncryptedPassword > input').addEventListener('keyup', () => {generateHashPassword(document.querySelector('app-longinput#nonEncryptedPassword > input').value)})
+document.querySelector('app-primarybutton#generate').addEventListener('click', () => {generatePassword()});
+document.querySelector('app-primarybutton#copy').addEventListener('click', () => {copy(document.querySelector('app-longinput[data-selectable="false"] > input'))});
+document.querySelector('app-longinput#nonEncryptedPassword > input').addEventListener('keyup', () => {generateHashPassword(document.querySelector('app-longinput#nonEncryptedPassword > input').value)});
+
 function createCustomElements() {
   customElements.define('app-primarybutton', PrimaryButton);
   customElements.define('app-secondarybutton', SecondaryButton);
   customElements.define('app-tertiarybutton', TertiaryButton);
   customElements.define('app-longinput', LongInput);
   customElements.define('app-shortinput', ShortInput);  
-}
-generatePassword()
+};
+generatePassword();

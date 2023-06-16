@@ -10,7 +10,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-/*TODO: Adicionar cor por preferência, e também salvar as preferências no localstorage*/
 body {
     align-items: center;
     display: flex;
