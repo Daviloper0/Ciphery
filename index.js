@@ -1,5 +1,5 @@
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./buttons.js"; 
-import { BYCRIPTEncrypt, MD5Encrypt, SHA1Encrypt } from "./encrypt.js";
+import { BASE64Encrypt, MD5Encrypt, SHA1Encrypt } from "./encrypt.js";
 import { LongInput, ShortInput } from "./input.js";
 createCustomElements();
 function generatePassword() {
@@ -27,19 +27,20 @@ function getRandomNumber(min, max) {
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min) + min);
 }
-function generateHashPassword(passwordString) {
+export function generateHashPassword(passwordString) {
   let type = document.querySelector('app-secondarybutton[data-set="cryptography"][data-selected="true"]').content
   let hashOutput = document.querySelector('app-longinput[data-selectable="false"] > input')
   let encryptedResult = '';
   
   if (type === 'MD5') encryptedResult = MD5Encrypt(passwordString);
   if (type === 'SHA-1') encryptedResult = SHA1Encrypt(passwordString);
-  if (type === 'bycript') encryptedResult = BYCRIPTEncrypt(passwordString);
+  if (type === 'BASE64') encryptedResult = BASE64Encrypt(passwordString);
 
   hashOutput.value = encryptedResult;
 }
 
 document.querySelector('app-primarybutton#generate').addEventListener('click', () => {generatePassword()})
+document.querySelector('app-longinput#nonEncryptedPassword > input').addEventListener('keyup', () => {generateHashPassword(document.querySelector('app-longinput#nonEncryptedPassword > input').value)})
 function createCustomElements() {
   customElements.define('app-primarybutton', PrimaryButton);
   customElements.define('app-secondarybutton', SecondaryButton);

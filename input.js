@@ -1,15 +1,14 @@
 export class LongInput extends HTMLElement{
   constructor() {
     super();
-    this.initialText = "";
+ 
   }
   connectedCallback() {
-    this.initialText = this.getAttribute("initialText") === null ? "" : this.getAttribute("initialText");
     this.render();
   }
   render() {
     this.innerHTML = `
-      <input type="text" value="${this.initialText}">
+      <input type="text">
     `
   }
 }

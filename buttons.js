@@ -1,5 +1,7 @@
 import { switchColorMode } from "./switchColorMode.js";
 import { copy } from "./copy.js";
+import { generateHashPassword } from "./index.js";
+
 export class PrimaryButton extends HTMLElement {
   constructor() {
     super();
@@ -25,6 +27,7 @@ export class SecondaryButton extends HTMLElement {
       this.addEventListener('click', () => {
         document.querySelector('[data-selected="true"][data-set="cryptography"]').dataset.selected = false;
         this.dataset.selected = true;
+        generateHashPassword(document.querySelector('app-longinput#nonEncryptedPassword > input').value)
       })
     }
     if (this.dataset.set === 'options') {

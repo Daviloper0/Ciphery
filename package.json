@@ -5,9 +5,7 @@
   "main": "index.js",
   "author": "daviloper <odaviloper@gmail.com>",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
-    "blueimp-md5": "^2.19.0",
     "crypto-js": "^4.1.1"
   }
 }

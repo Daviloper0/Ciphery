@@ -24,20 +24,20 @@
         <main>
             <p>Senha Padrão</p>
             <div class="app-cardrow">
-                <app-longinput initialText="Abc" id="nonEncryptedPassword"></app-longinput>
+                <app-longinput id="nonEncryptedPassword"></app-longinput>
                 <app-tertiarybutton source="/assets/light/light-copy.svg"></app-tertiarybutton>
                 <app-primarybutton content="Gerar" id="generate"></app-primarybutton>
             </div>
 
             <p>Hash Gerado</p>
             <div class="app-cardrow">
-                <app-longinput initialText="Abc" data-selectable="false"></app-longinput>
+                <app-longinput data-selectable="false"></app-longinput>
                 <app-primarybutton content="Copiar"></app-primarybutton>
             </div>
             <div class="app-cardrow">
                 <app-secondarybutton content="MD5" data-selected="true" data-set="cryptography"></app-secondarybutton>
                 <app-secondarybutton content="SHA-1" data-selected="false" data-set="cryptography"></app-secondarybutton>
-                <app-secondarybutton content="bycript" data-selected="false" data-set="cryptography"></app-secondarybutton>
+                <app-secondarybutton content="BASE64" data-selected="false" data-set="cryptography"></app-secondarybutton>
             </div>
         </main>
         <section>
@@ -52,6 +52,10 @@
             <app-shortinput></app-shortinput>
         </section>
     </div>
+    <script type="text/javascript" src="./node_modules/crypto-js/crypto-js.js"></script>
+    <script>
+        
+    </script>
     <script src="index.js" type="module"></script>
 </body>
 </html>
