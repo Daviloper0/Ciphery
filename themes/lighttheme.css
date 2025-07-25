@@ -68,4 +68,11 @@ body[data-theme="light"] main > label, body[data-theme="light"] section > label,
   color: var(--LIGHT-SESSION-TEXT);
 }
 
+body[data-theme="light"] app-tertiarybutton:hover{
+  background-color: var(--LIGHT-TERTIARYBUTTON-TEXT);
+}
+body[data-theme="light"] app-tertiarybutton:hover > img{
+  filter: invert(99%) sepia(0%) saturate(100%) hue-rotate(183deg) brightness(100%) contrast(89%);
+}
+
 

@@ -14,6 +14,7 @@ app-longinput > input{
 }
 app-longinput[data-selectable="false"] > input {
   pointer-events: none;
+
 }
 app-shortinput {
   border-radius: 4px;

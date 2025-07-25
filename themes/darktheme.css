@@ -71,3 +71,10 @@ body[data-theme="dark"] main, body[data-theme="dark"] section {
 body[data-theme="dark"] main > label, body[data-theme="dark"] section > label, body[data-theme="dark"] main > p, body[data-theme="dark"] section > p {
   color: var(--DARK-SESSION-TEXT);
 }
+body[data-theme="dark"] app-tertiarybutton:hover{
+  background-color: var(--DARK-TERTIARYBUTTON-TEXT);
+}
+body[data-theme="dark"] app-tertiarybutton:hover > img{
+  filter: invert(12%) sepia(7%) saturate(0%) hue-rotate(201deg) brightness(0%) contrast(90%);
+
+}
