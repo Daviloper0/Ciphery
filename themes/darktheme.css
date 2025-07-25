@@ -7,12 +7,12 @@
   --DARK-INPUT-BACKGROUND: #27272A;
   --DARK-INPUT-TEXT: #A1A1AA;
 
-  --DARK-PRIMARYBUTTON-BACKGROUND: #F43F5E;
+  --DARK-PRIMARYBUTTON-BACKGROUND: #AD0B25;
   --DARK-PRIMARYBUTTON-TEXT: #FAFAFA;
   
   --DARK-SECONDARYBUTTON-BACKGROUND: #FB71851a;
-  --DARK-SECONDARYBUTTON-BORDER: #FB7185;
-  --DARK-SECONDARYBUTTON-TEXT: #FB7185;
+  --DARK-SECONDARYBUTTON-BORDER: #FB93A3;
+  --DARK-SECONDARYBUTTON-TEXT: #FB93A3;
 
   --DARK-disabled-SECONDARYBUTTON-BACKGROUND: #18181B;
   --DARK-disabled-SECONDARYBUTTON-BORDER: #52525B;
@@ -37,6 +37,10 @@ body[data-theme="dark"] app-secondarybutton[data-selected="true"] {
   background-color: var(--DARK-SECONDARYBUTTON-BACKGROUND);
   border: 1px solid var(--DARK-SECONDARYBUTTON-BORDER);
   color: var(--DARK-SECONDARYBUTTON-TEXT);
+}
+body[data-theme="dark"] app-secondarybutton[data-selected="false"]:hover {
+  border-color: var(--DARK-HEADER-TITLE);
+  color: var(--DARK-HEADER-TITLE);
 }
 body[data-theme="dark"] app-secondarybutton[data-selected="false"] {
   background-color: var(--DARK-disabled-SECONDARYBUTTON-BACKGROUND);
@@ -76,5 +80,4 @@ body[data-theme="dark"] app-tertiarybutton:hover{
 }
 body[data-theme="dark"] app-tertiarybutton:hover > img{
   filter: invert(12%) sepia(7%) saturate(0%) hue-rotate(201deg) brightness(0%) contrast(90%);
-
 }

@@ -43,6 +43,11 @@ body[data-theme="light"] app-secondarybutton[data-selected="false"] {
   border: 1px solid var(--LIGHT-disabled-SECONDARYBUTTON-BORDER);
   color: var(--LIGHT-disabled-SECONDARYBUTTON-TEXT);
 }
+body[data-theme="light"] app-secondarybutton[data-selected="false"]:hover {
+  border-color: #000;
+  background-color: white;
+  color: #000;
+}
 body[data-theme="light"] app-tertiarybutton {
   background-color: var(--LIGHT-TERTIARYBUTTON-BACKGROUND);
 }
