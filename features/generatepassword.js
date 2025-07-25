@@ -2,7 +2,7 @@ import { generateHashPassword } from "./encrypt.js";
 
 export function generatePassword() {
   let password = {
-    input: document.querySelector('app-longinput#nonEncryptedPassword > input'),
+    input: document.querySelector('app-longinput[data-selectable="true"] > input'),
     length: document.querySelector('app-shortinput > input').value === '' ? 8 : document.querySelector('app-shortinput > input').value,
     options: document.querySelectorAll('app-secondarybutton[data-set="options"][data-selected="true"]') ?? document.querySelector('app-secondarybutton[data-set="options"]'),
     result: ""

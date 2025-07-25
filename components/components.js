@@ -15,7 +15,7 @@ function addCustomElementsEvents() {
   let elements = {
     generate: document.querySelector('app-primarybutton#generate'),
     copy:  document.querySelector('app-primarybutton#copy'),
-    password: document.querySelector('app-longinput#nonEncryptedPassword > input')
+    password: document.querySelector('app-longinput[data-selectable="true"] > input')
   }
   elements.generate.addEventListener('click', () => {
     generatePassword();

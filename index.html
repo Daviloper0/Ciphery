@@ -22,22 +22,22 @@
       <h2>Desbloqueie seu mundo com senhas seguras!</h2>
     </div> 
     <div class="app-options">
-      <app-tertiarybutton source="/assets/light/light-colormode.svg" do="switchColorMode"></app-tertiarybutton>
-      <app-tertiarybutton source="/assets/light/light-github.svg" linkTo=""></app-tertiarybutton>
+      <app-tertiarybutton source="/assets/light/light-colormode.svg" do="switchColorMode" alt="Change color theme"></app-tertiarybutton>
+      <app-tertiarybutton source="/assets/light/light-github.svg" linkTo="" alt="Check GitHub page"></app-tertiarybutton>
     </div>
   </header>
   <div class="app-row">
     <main>
-      <p>Senha Padrão</p>
+      <label for="non-encrypted-password">Senha Padrão</label>
       <div class="app-cardrow">
-          <app-longinput id="nonEncryptedPassword"></app-longinput>
+          <app-longinput data-selectable="true" input-id="non-encrypted-password"></app-longinput>
           <app-tertiarybutton source="/assets/light/light-copy.svg" do="copy"></app-tertiarybutton>
           <app-primarybutton content="Gerar" id="generate"></app-primarybutton>
       </div>
 
-      <p>Hash Gerado</p>
+      <label for="encrypted-password">Hash Gerado</p>
       <div class="app-cardrow">
-          <app-longinput data-selectable="false"></app-longinput>
+          <app-longinput data-selectable="false" input-id="encrypted-password"></app-longinput>
           <app-primarybutton content="Copiar" id="copy"></app-primarybutton>
       </div>
       <div class="app-cardrow">
@@ -54,8 +54,8 @@
           <app-secondarybutton content="123" data-selected="false" data-set="options" data-start="48" data-end="57"></app-secondarybutton>
           <app-secondarybutton content="!#@" data-selected="false" data-set="options" data-start="33" data-end="47"></app-secondarybutton>
       </div>
-      <p>Tamanho</p>
-      <app-shortinput></app-shortinput>
+      <label for="password-size">Tamanho</label>
+      <app-shortinput input-id="password-size"></app-shortinput>
     </section>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -27,7 +27,7 @@ export class SecondaryButton extends HTMLElement {
       this.addEventListener('click', () => {
         document.querySelector('[data-selected="true"][data-set="cryptography"]').dataset.selected = false;
         this.dataset.selected = true;
-        generateHashPassword(document.querySelector('app-longinput#nonEncryptedPassword > input').value)
+        generateHashPassword(document.querySelector('app-longinput[data-selectable="true"] > input').value)
       })
     }
     if (this.dataset.set === 'options') {
@@ -49,6 +49,7 @@ export class TertiaryButton extends HTMLElement {
     super();
     this.imageSource = "";
     this.action = () => {};
+    this.alttext = ""
   }
   attributeChangedCallback() {
     this.render()
@@ -56,6 +57,7 @@ export class TertiaryButton extends HTMLElement {
   
   connectedCallback() {
     this.imageSource = this.getAttribute("source") === null ? "" : this.getAttribute("source");
+    this.alttext = this.getAttribute("alt") === null ? "" : this.getAttribute("alt")
     if (this.getAttribute('do') !== null) this.addEventListener('click', () => {
       this.getDoFunctions(this.getAttribute('do'))()
     })
@@ -73,6 +75,6 @@ export class TertiaryButton extends HTMLElement {
     return functions[`${doCall}`]
   }
   render() {
-    this.innerHTML = `<img src=".${this.imageSource}">`;
+    this.innerHTML = `<img src=".${this.imageSource}" alt="${this.alttext}">`;
   }
 }
