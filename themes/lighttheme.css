@@ -64,7 +64,8 @@ body[data-theme="light"] h2 {
 body[data-theme="light"] main, section {
   border: 1px solid var(--LIGHT-INPUT-BACKGROUND); /*Remover redundância, border tem nos dois, não faz sentido colocar o shorthand inteiro aqui. Duas propriedades no arquivo principal e a cor aqui.*/
 }
-body[data-theme="light"] main > p, section > p {
+body[data-theme="light"] main > label, body[data-theme="light"] section > label, body[data-theme="light"] main > p, body[data-theme="light"] section > p {
   color: var(--LIGHT-SESSION-TEXT);
 }
+
 

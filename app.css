@@ -58,7 +58,7 @@ main, section {
 main {
   flex: 1;
 }
-main > p, section > p {
+main > label, section > label, main > p, section > p {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 8px;

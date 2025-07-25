@@ -68,6 +68,6 @@ body[data-theme="dark"] h2 {
 body[data-theme="dark"] main, body[data-theme="dark"] section {
   border: 1px solid var(--DARK-INPUT-BACKGROUND); /*Remover redundância, border tem nos dois, não faz sentido colocar o shorthand inteiro aqui. Duas propriedades no arquivo principal e a cor aqui.*/
 }
-body[data-theme="dark"] main > p, body[data-theme="dark"] section > p {
+body[data-theme="dark"] main > label, body[data-theme="dark"] section > label, body[data-theme="dark"] main > p, body[data-theme="dark"] section > p {
   color: var(--DARK-SESSION-TEXT);
 }

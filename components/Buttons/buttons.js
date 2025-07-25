@@ -70,7 +70,7 @@ export class TertiaryButton extends HTMLElement {
   getDoFunctions(doCall) {
     const functions = {
       'switchColorMode': () => {switchColorMode()},
-      'copy': async () => {await copy(document.querySelector('app-longinput#nonEncryptedPassword > input'))}
+      'copy': async () => {await copy(document.querySelector('app-longinput[data-selectable="true"] > input'))}
     }
     return functions[`${doCall}`]
   }

@@ -4,7 +4,6 @@ app-longinput{
   width: 100%;
   margin-bottom: 30px;
 }
-
 app-longinput > input{
   background-color: transparent;
   height: 40px;
